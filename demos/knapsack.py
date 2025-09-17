@@ -5,6 +5,9 @@ from dp._visualizer import Visualizer
 # An item is a 2-tuple with (space, value)
 # items is a list of items in the problem instance.
 def knapsack(items, capacity):
+    # Why is create_app() not found without setting PYTHONPATH?
+    print("Visualizer loaded from:", dir(Visualizer))
+        
     # Initialize DPArray
     OPT = DPArray((len(items) + 1, capacity + 1), array_name="Knapsack")
     DP_items = DPArray(shape=len(items), array_name="Items", logger=OPT.logger)
