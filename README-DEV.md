@@ -21,6 +21,13 @@ which was install with
 ```console
 
 export PYTHONPATH=/home/sgromme/source/dpvis:$PYTHONPATH
+env | grep PYTHONPATH
+
+```
+# check the PYTHONPATH
+```console
+
+env | grep PYTHONPATH
 
 ```
 Can you explain why the code in knapsack.py can't find this method on visualizer.create_app() when the dpvis package has been installed in the python environment, I have to run this on the command line export PYTHONPATH=/home/sgromme/source/dpvis:$PYTHONPATH for it to work?
@@ -30,3 +37,13 @@ If I start the Python REPL in the python virtual environment and import dp.  I t
 
 import dp._visualizer
 print("Visualizer loaded from:", dp._visualizer.__file__)
+
+
+
+
+# Testing the problem
+1. manually in the "__main__" , create a inputs and print out the results
+2. use a test framework, Good for automation
+
+
+# Function to determine the space complexity or print out memory usage.
